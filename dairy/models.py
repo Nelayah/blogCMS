@@ -13,5 +13,5 @@ class Dairy(models.Model):
 		return self.title
 
 	class Meta:
-		ordering = ('time',)
+		ordering = ('-time',)
 		db_table = "dairy"

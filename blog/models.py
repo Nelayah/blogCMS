@@ -13,5 +13,5 @@ class Blog(models.Model):
 		return self.title
 
 	class Meta:
-		ordering = ('time',)
+		ordering = ('-time',)
 		db_table = "blog"

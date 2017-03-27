@@ -1,3 +1,4 @@
+from django.http import HttpResponsePermanentRedirect
 from others.models import Others
 from others.serializers import OthersListSerializer, OthersDetailSerializer
 from others.permissions import OthersPermission
@@ -14,3 +15,9 @@ class OthersViewSet(viewsets.ModelViewSet):
 		if self.action == 'list':
 			return OthersListSerializer
 		return OthersDetailSerializer
+
+def project_redirect(request, *args, **kwargs):
+	return HttpResponsePermanentRedirect("/api/others/project/")
+
+def about_redirect(request, *args, **kwargs):
+	return HttpResponsePermanentRedirect("/api/others/about/")
