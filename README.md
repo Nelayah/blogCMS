@@ -8,3 +8,8 @@ The api server is built with django, django-restframework and postgresql.
 
 ## 前端
 [BLOG FRONTEND](https://github.com/Nelayah/blog)
+
+## License
+
+Copyright © 2017, 彭加生 (hayalen < hayaleNelayah@outlook.com >). All Rights Reserved.
+This project is free software and released under the **[GNU General Public License (GPL V3)](http://www.gnu.org/licenses/gpl.html)**.
