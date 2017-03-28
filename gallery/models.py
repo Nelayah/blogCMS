@@ -10,13 +10,11 @@ class PathAndRename(object):
 
 	def __call__(self, instance, filename):
 		ext = filename.split('.')[-1]
-		# set filename as random string
 		filename = '{}.{}'.format(uuid4().hex, ext)
-		# return the whole path to the file
 		return os.path.join(self.path, filename)
 
 def RenameImage():
-	path_and_rename = PathAndRename("avatars/")
+	path_and_rename = PathAndRename("images/")
 	return path_and_rename
 
 class Gallery(models.Model):

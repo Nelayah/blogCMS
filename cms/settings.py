@@ -31,7 +31,8 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'dairy.apps.DairyConfig',
     'others.apps.OthersConfig',
-    'gallery.apps.GalleryConfig'
+    'gallery.apps.GalleryConfig',
+    'compressor',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +70,9 @@ WSGI_APPLICATION = 'cms.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 5
 }
