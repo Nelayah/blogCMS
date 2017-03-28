@@ -2,10 +2,10 @@ from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
 class Others(models.Model):
-	title = models.CharField(max_length=100, unique=True)
+	title = models.CharField(max_length=800, unique=True)
 	tag = ArrayField(models.CharField(max_length=100), blank=True)
 	slug = models.SlugField(max_length=60, unique=True)
-	digest = models.CharField(max_length=200, null=True, blank=True)
+	digest = models.CharField(max_length=800, null=True, blank=True)
 	content = models.TextField()
 	time = models.DateField(db_index=True, auto_now_add=True)
 
